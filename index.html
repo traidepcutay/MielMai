@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MielMai | Nước hoa chính hãng</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="announcement">Free Ship Toàn Quốc</div>
+  <header class="site-header">
+    <a class="brand" href="#"><strong>MielMai</strong><span>THE ART OF FRAGRANCE</span></a>
+    <nav>
+      <a href="#home">Trang chủ</a><a href="#shop">Tất cả nước hoa</a>
+      <a href="#shop" data-nav-gender="Nam">Nước hoa nam</a>
+      <a href="#shop" data-nav-gender="Nữ">Nước hoa nữ</a>
+      <a href="#shop" data-nav-gender="Unisex">Unisex</a>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-button" id="searchToggle" aria-label="Tìm kiếm">⌕</button>
+      <button class="cart-button" id="openCart">Giỏ hàng <span id="cartCount">0</span></button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-copy">
+        <p class="eyebrow">A SCENT THAT STAYS WITH YOU</p>
+        <h1>Dấu ấn riêng,<br><em>trong từng nốt hương.</em></h1>
+        <p>Khám phá thế giới nước hoa với những mùi hương dành riêng cho cá tính và khoảnh khắc của bạn.</p>
+        <a class="button button-gold" href="#shop">KHÁM PHÁ BỘ SƯU TẬP ↗</a>
+        <div class="hero-note"><span>✦</span> Hương thơm. Phong cách. Dấu ấn.</div>
+      </div>
+      <div class="hero-visual">
+        <img src="img/1792685863683_1486805340456938110_1486805340456938110_d9c5b14fdd1dc220968f01ed6ea2c993.jpg" alt="Chai nước hoa sang trọng">
+        <div class="hero-stamp">FIND<br>YOUR<br>SCENT</div>
+      </div>
+    </section>
+
+    <section class="benefits">
+      <div><span>✧</span><p><b>Tuyển chọn tinh tế</b><small>Những mùi hương đáng khám phá</small></p></div>
+      <div><span>♧</span><p><b>Tư vấn mùi hương</b><small>Chọn hương theo phong cách</small></p></div>
+      <div><span>♢</span><p><b>Đóng gói chỉn chu</b><small>Sẵn sàng để làm quà tặng</small></p></div>
+    </section>
+
+    <section class="shop-section" id="shop">
+      <div class="section-intro">
+        <p class="eyebrow">THE FRAGRANCE EDIT</p>
+        <h2>Tìm mùi hương của bạn</h2>
+        <p>Lọc theo phong cách, ngân sách hoặc thương hiệu yêu thích.</p>
+      </div>
+
+      <div class="shop-layout">
+        <aside class="filters">
+          <div class="filter-head"><h3>BỘ LỌC</h3><button id="clearFilters">Xóa tất cả</button></div>
+          <div class="filter-group">
+            <h4>Đối tượng</h4>
+            <label><input type="radio" name="gender" value="Nam"> Nam</label>
+            <label><input type="radio" name="gender" value="Nữ"> Nữ</label>
+            <label><input type="radio" name="gender" value="Unisex"> Unisex</label>
+          </div>
+          <div class="filter-group">
+            <h4>Khoảng giá</h4>
+            <label><input type="radio" name="price" value="all" checked> Tất cả mức giá</label>
+            <label><input type="radio" name="price" value="under500"> Dưới 500.000₫</label>
+            <label><input type="radio" name="price" value="500to1000"> 500.000₫ – 1.000.000₫</label>
+            <label><input type="radio" name="price" value="1000to2000"> 1.000.000₫ – 2.000.000₫</label>
+            <label><input type="radio" name="price" value="over2000"> Trên 2.000.000₫</label>
+          </div>
+          <div class="filter-group">
+            <h4>Nhóm hương</h4>
+              <label><input type="checkbox" name="scent" value="Gỗ"> Hương gỗ</label>
+              <label><input type="checkbox" name="scent" value="Tươi mát"> Tươi mát</label>
+              <label><input type="checkbox" name="scent" value="Cam chanh"> Cam chanh</label>
+              <label><input type="checkbox" name="scent" value="Gia vị"> Gia vị cay</label>
+              <label><input type="checkbox" name="scent" value="Ngọt"> Ngọt ấm</label>
+              <label><input type="checkbox" name="scent" value="Hổ phách"> Hổ phách</label>
+              <label><input type="checkbox" name="scent" value="Hương biển"> Hương biển</label>
+              <label><input type="checkbox" name="scent" value="Hoa"> Hương hoa</label>
+          </div>
+          <div class="filter-group">
+            <h4>Thương hiệu</h4>
+            <select id="brandFilter">
+              <option value="all">Tất cả thương hiệu</option>
+              <option value="MielMai">MielMai</option>
+              <option value="Maison">Maison</option>
+              <option value="Atelier">Atelier</option>
+              <option value="Élan">Élan</option>
+            </select>
+          </div>
+        </aside>
+
+        <div class="catalog">
+          <div class="catalog-toolbar">
+            <div><span id="resultCount">8</span> sản phẩm</div>
+            <div class="toolbar-controls">
+              <label for="searchInput" class="sr-only">Tìm sản phẩm</label>
+              <input id="searchInput" type="search" placeholder="Tìm tên nước hoa...">
+              <select id="sortSelect" aria-label="Sắp xếp sản phẩm">
+                <option value="featured">Sắp xếp: Nổi bật</option>
+                <option value="priceAsc">Giá: Thấp đến cao</option>
+                <option value="priceDesc">Giá: Cao đến thấp</option>
+                <option value="name">Tên A–Z</option>
+              </select>
+            </div>
+          </div>
+          <div class="product-grid" id="productGrid"></div>
+          <div class="empty-state" id="emptyState" hidden>Không tìm thấy sản phẩm phù hợp. Hãy thử đổi bộ lọc nhé.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="newsletter">
+      <p class="eyebrow">A NOTE FROM MIELMAI</p>
+      <h2>Một mùi hương. Ngàn cảm xúc.</h2>
+      <p>Theo dõi bộ sưu tập mới và những gợi ý chọn hương từ MielMai.</p>
+      <form id="newsletterForm"><input type="email" placeholder="Email của bạn" required><button class="button button-dark">ĐĂNG KÝ</button></form>
+      <small id="newsletterMessage"></small>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-main">
+      <div><a class="brand footer-brand" href="#"><strong>MielMai</strong><span>THE ART OF FRAGRANCE</span></a><p>Khám phá dấu ấn của riêng bạn qua từng nốt hương.</p></div>
+      <div><h4>KHÁM PHÁ</h4><a href="#shop">Tất cả sản phẩm</a><a href="#shop" data-nav-gender="Nam">Nước hoa nam</a><a href="#shop" data-nav-gender="Nữ">Nước hoa nữ</a><a href="#shop" data-nav-gender="Unisex">Unisex</a></div>
+      <div><h4>CHĂM SÓC KHÁCH HÀNG</h4><a href="#contact">Vận chuyển & đổi trả</a><a href="#contact">Câu hỏi thường gặp</a><a href="#contact">Liên hệ</a></div>
+      <div id="contact"><h4>LIÊN HỆ</h4><p>Email: hello@mielmai.vn</p><p>Hotline: 0972 645 042</p><p>Thứ 2 – Chủ nhật, 9:00–21:00</p></div>
+    </div>
+    <div class="footer-bottom">© 2026 MielMai. Giao diện mẫu – vui lòng thay thông tin liên hệ trước khi sử dụng.</div>
+  </footer>
+
+  <div class="overlay" id="overlay"></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Giỏ hàng">
+    <div class="drawer-header"><h2>Giỏ hàng của bạn</h2><button id="closeCart" aria-label="Đóng">×</button></div>
+    <div id="cartItems" class="cart-items"></div>
+    <div class="cart-summary"><div><span>Tạm tính</span><strong id="cartTotal">0₫</strong></div><button class="button button-dark" id="checkoutButton">TIẾN HÀNH ĐẶT HÀNG</button><small>Đây là bản demo giao diện; chưa kết nối thanh toán.</small></div>
+  </aside>
+
+  <div class="product-modal" id="productModal" role="dialog" aria-modal="true" aria-label="Chi tiết sản phẩm">
+    <div class="modal-panel"><button class="modal-x" id="closeProduct" aria-label="Đóng">×</button><div id="modalBody"></div></div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
